@@ -9,18 +9,18 @@ use Composer\Plugin\PluginInterface;
 use Pimple\Container;
 
 /**
- * Class PHPCodeSnifferStandardInstallerPlugin
+ * Class PHPCodeSnifferStandardsInstallerPlugin
  *
  * @package wpscholar\Composer
  */
-class PHPCodeSnifferStandardInstallerPlugin implements PluginInterface, EventSubscriberInterface {
+class PHPCodeSnifferStandardsInstallerPlugin implements PluginInterface, EventSubscriberInterface {
 
 	/**
 	 * The supported package type.
 	 *
 	 * @var string
 	 */
-	const PACKAGE_TYPE = 'phpcs-standard';
+	const PACKAGE_TYPE = 'phpcs-standards';
 
 	/**
 	 * A Pimple dependency injection Container instance.
@@ -47,11 +47,12 @@ class PHPCodeSnifferStandardInstallerPlugin implements PluginInterface, EventSub
 		$config = new PHPCodeSnifferConfig( $container );
 		$container['config'] = $config;
 
-		$installer = new PHPCodeSnifferStandardInstaller( $io, $composer, self::PACKAGE_TYPE );
+		$installer = new PHPCodeSnifferStandardsInstaller( $io, $composer, self::PACKAGE_TYPE );
 		$installer->injectContainer( $container );
 
 		$composer->getInstallationManager()->addInstaller( $installer );
 
+		self::$container = $container;
 		self::$container = $container;
 	}
 

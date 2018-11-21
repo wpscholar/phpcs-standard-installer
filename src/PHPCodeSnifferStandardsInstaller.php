@@ -9,11 +9,11 @@ use Composer\Repository\InstalledRepositoryInterface;
 use Pimple\Container;
 
 /**
- * Class PHPCodeSnifferStandardInstaller
+ * Class PHPCodeSnifferStandardsInstaller
  *
  * @package wpscholar\Composer
  */
-class PHPCodeSnifferStandardInstaller extends LibraryInstaller {
+class PHPCodeSnifferStandardsInstaller extends LibraryInstaller {
 
 	/**
 	 * @var Container

@@ -1,5 +1,5 @@
 {
-  "name": "wpscholar/phpcs-standard-installer",
+  "name": "wpscholar/phpcs-standards-installer",
   "description": "A custom Composer installer for PHP Code Sniffer standards.",
   "type": "composer-plugin",
   "license": "GPL-2.0-or-later",
@@ -19,6 +19,6 @@
     "pimple/pimple": "^3.2"
   },
   "extra": {
-    "class": "wpscholar\\Composer\\PHPCodeSnifferStandardInstallerPlugin"
+    "class": "wpscholar\\Composer\\PHPCodeSnifferStandardsInstallerPlugin"
   }
 }
