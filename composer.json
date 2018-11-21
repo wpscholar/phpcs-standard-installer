@@ -1,0 +1,24 @@
+{
+  "name": "wpscholar/phpcs-standard-installer",
+  "description": "A custom Composer installer for PHP Code Sniffer standards.",
+  "type": "composer-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Micah Wood",
+      "email": "micah@wpscholar.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "wpscholar\\Composer\\": "src"
+    }
+  },
+  "require": {
+    "composer-plugin-api": "^1.1",
+    "pimple/pimple": "^3.2"
+  },
+  "extra": {
+    "class": "wpscholar\\Composer\\PHPCodeSnifferStandardInstallerPlugin"
+  }
+}
